@@ -22,8 +22,8 @@
   height: 60%;
 }
 .bar {
-  border: 0.1vw solid rgb(70, 64, 64);
-  width: 0.7vw;
+  border: 0.2vw solid rgb(111, 105, 105);
+  width: 2vw;
   margin: 0.2vw;
   background-color: #be6dde;
 }
