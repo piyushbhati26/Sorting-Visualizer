@@ -1,0 +1,82 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sorting Visualization</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/index.css" />
+  </head>
+
+  <body>
+    <!-- ======== Main div ======== -->
+    <div class="main">
+      <!-- ======== header div ======== -->
+      <div class="header">
+        <h1>Sorting Visualizer</h1>
+
+        <!-- ======== vars div ======== -->
+        <div class="header__vars">
+          <!-- ======== range div ======== -->
+          <div class="header__range">
+            <!-- ======== slides div ======== -->
+            <div class="header__slide">
+              <label for="slide__bars">ِArray Size</label> :
+              <input
+                id="bars"
+                type="range"
+                name="bars"
+                min="1"
+                max="70"
+                value="50"
+                oninput="setup()"
+                onchange="setup()"
+              />
+              <span id="b"> </span>
+            </div>
+            <div class="header__slide">
+              <label for="slide__delay">Speed</label> :
+              <input
+                id="delay"
+                type="range"
+                name="delay"
+                min="0"
+                max="500"
+                value="25"
+                oninput="setup()"
+                onchange="setup()"
+              />
+              <span id="d"></span>
+            </div>
+          </div>
+
+          <!-- ======== sort buttons div ======== -->
+          <div class="sort__items">
+            <input
+              type="button"
+              onclick="SelectionSort()"
+              value="Selection Sort"
+            />
+            <input type="button" onclick="BubbleSort()" value="Bubble Sort" />
+            <input
+              type="button"
+              onclick="InsertionSort()"
+              value="Insertion Sort"
+            />
+            <input type="button" onclick="MergeSort()" value="Merge Sort" />
+            <input type="button" onclick="QuickSort()" value="Quick Sort" />
+            <input
+              type="button"
+              onclick="HeapSort()"
+              value="Heap Sort"
+            /><br /><br />
+          </div>
+          <button onclick="reset()">Generate New Array</button>
+        </div>
+      </div>
+
+      <!-- ======== container div ======== -->
+      <div id="container"></div>
+    </div>
+    <script src="assets/js/beep.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
